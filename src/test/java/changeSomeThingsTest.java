@@ -1,5 +1,6 @@
 import java.util.concurrent.TimeUnit;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -28,5 +29,10 @@ public class changeSomeThingsTest extends AbstractTest{
 		
 		WebElement searchButton = driver.findElement(By.xpath("//*[@type='submit']"));
 		searchButton.click();
+	}
+	
+	@After
+	public void shutdown() {
+		driver.close();
 	}
 }
