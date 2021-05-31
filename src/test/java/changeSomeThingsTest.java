@@ -21,6 +21,7 @@ public class changeSomeThingsTest extends AbstractTest{
 		driver.get("http://192.168.1.1:8083/HotelWebapp/");
 		driver.manage().window().maximize();
 		
+		Thread.sleep(5000);
 		WebElement citySelect = driver.findElement(By.name("ville"));
 		Select select = new Select(citySelect);
 		select.selectByValue("Paris");
